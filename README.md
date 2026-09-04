@@ -16,6 +16,8 @@ vesicles as a liquid biopsy of brain insulin resistance across obesity subtypes"
    founding paper implies.
 3. **Re-optimise the analyte panel for free.** Two independent obesity cohorts show the
    analytes that track HOMA-IR are Akt/pAkt/pERK — none of which the current panel measures.
+   Note carefully: those are **peripheral** correlations. **No nEV analyte has been shown to
+   measure central (brain) insulin resistance** — see [`docs/audit.md` §4a](docs/audit.md).
 4. **Establish what is actually novel.** The novelty claim as written is refuted by at least
    three published cohorts, one of them null on the exact primary endpoint at larger *n*.
 
@@ -30,6 +32,7 @@ null disappear.
 | [`docs/audit.md`](docs/audit.md) | What the mining already established — the facts that change the proposal *before* any new analysis |
 | [`docs/plan.md`](docs/plan.md) | The work plan: packages A/B/C by access tier, decision gates, critical path, kill list |
 | [`docs/resources.md`](docs/resources.md) | Verified resource inventory — accessions, URLs, access conditions, verification status |
+| [`docs/protocol-reference.md`](docs/protocol-reference.md) | The two published nEV protocols verbatim, with catalogue numbers — including the one our proposal has superseded |
 | [`docs/METHODS.md`](docs/METHODS.md) | How this was produced, and the verification caveats that apply to every claim here |
 
 ## How to read the claims

@@ -71,6 +71,13 @@ antibody binds recombinant α-synuclein ~3-fold above IgG.
 > immunocapture"* to *"benchmark neuronal EV capture antigens"*, which is publishable
 > whichever way the result falls.
 
+**[V] One further point, from the Kapogiannis 2024 methods.** That lab no longer uses the method
+our proposal describes. Their 2024 trial separates EVs by **size-exclusion chromatography** and
+then captures on **three** neuron-specific antigens — **L1CAM + GAP43 + NLGN3** — not L1CAM
+alone, and not by ExoQuick precipitation. Proposing single-antigen L1CAM capture is proposing
+the superseded version of the originating lab's own protocol. Both protocols are set out
+side by side in [`protocol-reference.md`](protocol-reference.md).
+
 ---
 
 ## 2. ATP1A3 beats L1CAM on brain specificity by three orders of magnitude
@@ -142,15 +149,55 @@ signalling *"remains to be determined."*
 
 ## 4. The panel measures the analytes with the weakest published link to insulin resistance
 
+> **Read this first — a distinction that is easy to lose.** Everything in this section is about
+> **PERIPHERAL** insulin resistance. **No nEV analyte has ever been shown to measure central
+> (brain) insulin resistance.** See [§4a](#4a-what-has-actually-been-measured-against-a-brain-readout)
+> for the one study that used a brain readout at all — and it did not use pAkt.
+
 **[V]** In two independent obesity cohorts, nEV **Akt, pAkt-Ser473 and pERK1/2** track
-HOMA-IR — and the IRS-1 phospho-forms do not:
+**HOMA-IR and other peripheral indices** — and the IRS-1 phospho-forms do not:
 
 | Study | n | Finding |
 | --- | --- | --- |
-| Kapogiannis 2024 *Cell Metab* (PMC11305918) | 40, BMI 34.4 | Δ HOMA2-IR vs nEV Akt ρ = −0.46; pS473-Akt ρ = −0.46; pERK1/2 ρ = −0.51. **Not** IRS-1 phospho-forms. |
-| Malin 2025 *Aging Cell* (PMC11709104) **[V-]** | 21 (randomised two-arm exercise trial, not single-arm) | total Akt vs HOMA-IR r = −0.48; pAkt-S473 vs insulin sensitivity r = −0.49 to −0.53 |
+| Kapogiannis 2024 *Cell Metab* 36(8):1668–1678.e5 (PMID 38901423) **[V]** | 40 | 8-week RCT, 5:2 intermittent fasting vs healthy-living diet, cognitively intact older adults with IR (BMI ~34, HOMA2-IR ~2.4, **T2D excluded**). Change-to-change: decreases in HOMA2-IR ↔ increases in nEV **Akt ρ = −0.46, P = 0.01**; **pS473-Akt ρ = −0.46, P = 0.01**; **pERK1/2 ρ = −0.51, P = 0.004**. **Not** the IRS-1 phospho-forms. Now verified from the author manuscript. |
+| Malin 2025 *Aging Cell* 24:e14369 (PMID 39421964) **[V]** | 21 | total Akt (60 min OGTT) vs HOMA-IR **r = −0.48, p = 0.02**; fasting pAkt-Ser473 vs peripheral insulin sensitivity **r = −0.49, p = 0.02**; pAkt-Ser473 (60 min) vs peripheral insulin sensitivity **r = −0.53, p = 0.01**. Their Figure 4 is titled *"Correlation of nEV-derived insulin signaling proteins with **peripheral** insulin sensitivity."* No brain measure in the paper. |
 
 These analytes are essentially free on the same MSD or MILLIPLEX Akt/mTOR multiplex.
+
+### 4a. What has actually been measured against a brain readout
+
+**[V]** Exactly one study links nEV insulin-signalling cargo to a directly measured brain
+readout — **Malin et al., *Compr Physiol* 2026 (PMID 41876945, PMC13013089)**, n = 15,
+single bout of aerobic exercise, pCASL MRI:
+
+- **fasting pIR-Tyr1162/Tyr1163** ↔ left hippocampal CBF **r = 0.51, p = 0.05**
+- **fasting pIR-Tyr1162/Tyr1163** ↔ pallidum CBF **r = 0.57, p = 0.02**
+- right cerebellum, trend only (r = 0.46, p = 0.07)
+
+Three things to be precise about:
+
+1. **The analyte is pIR-Tyr, not pAkt.** pAkt correlated with no brain region in that paper.
+2. **The readout is *fasting* CBF, not insulin-stimulated CBF** — so it is not a measure of
+   brain insulin resistance, only of regional perfusion.
+3. **It is a change-vs-change correlation** after a single exercise bout, at n = 15,
+   uncorrected for multiplicity, with p at the boundary.
+
+**[V] And the one study that could have closed this did not report it.** Kapogiannis 2024
+measured nEV insulin signalling, BrainAGE (MRI) and brain glucose (MRS) **in the same 40
+people** — and reports **no correlation between any nEV analyte and either brain measure**. The
+only correlation reported is nEV vs HOMA2-IR, i.e. peripheral. The paper's own wording is
+careful: the association *"suggest[s] a link between peripheral and neuronal IR **and/or
+parallel responsiveness to dietary interventions**."* Parallel change over 8 weeks is not
+evidence that the blood measure reports the brain state.
+
+> **That un-reported analysis is a concrete opportunity.** Their deposited dataset would allow
+> exactly the nEV ↔ BrainAGE / MRS-glucose correlation nobody has published. The Mendeley
+> preview link in the paper is expired (HTTP 401 **[V]**) — so this is an email to
+> kapogiannisd@mail.nih.gov, not a download. Trial: NCT02460783.
+
+A Europe PMC search for nEV/L1CAM + Akt + any brain imaging modality returns no other primary
+study. **So: if we want to claim a central readout, pAkt is not the analyte that gets us there,
+and no analyte currently has more than n = 15 of hypothesis-generating support.**
 
 **[V] Site choice is also dated.** The human brain-tissue evidence for brain insulin
 resistance (Talbot 2012 *JCI*) implicates **Ser616 and Ser636/639**, not Ser312. Ser312 is
@@ -200,7 +247,9 @@ a pre-registered residual threshold simulated against an **r ≈ 0.19 null, not 
 
 - **[V] No Simoa assay for IRS-1 or phospho-Ser312-IRS-1 could be found** in the Quanterix
   catalogue. Every published nEV IRS-1 measurement used plate ELISA, Western blot, MSD or
-  Luminex. "By Simoa or MSD" in a funded budget is a deliverability risk.
+  Luminex. "By Simoa or MSD" in a funded budget is a deliverability risk. The reference
+  protocol uses **MSD** throughout — exact catalogue numbers in
+  [`protocol-reference.md`](protocol-reference.md#assays--msd-not-simoa).
 - **[V] The reference reagent has no absolute standard.** Invitrogen KHO0521 reports
   **arbitrary U/mL**, and is validated for cell lysates only — serum and plasma are not listed
   matrices. Effect sizes in lot-dependent arbitrary units do not transfer to a follow-on study
